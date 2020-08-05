@@ -1,79 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Law Firm - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php require'Nav.php';?>
     
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-
-  	<div class="wrap">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 d-flex align-items-center">
-						<p class="mb-0 phone pl-md-2">
-							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a> 
-							<a href="#"><span class="fa fa-paper-plane mr-1"></span> youremail@email.com</a>
-						</p>
-					</div>
-					<div class="col-md-6 d-flex justify-content-md-end">
-						<div class="social-media">
-			    		<p class="mb-0 d-flex">
-			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
-			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
-			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
-			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
-			    		</p>
-		        </div>
-					</div>
-				</div>
-			</div>
-		</div>
-    
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Law Firm</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="practice-area.html" class="nav-link">Practice Areas</a></li>
-	          <li class="nav-item"><a href="cases.html" class="nav-link">Cases</a></li>
-	          <li class="nav-item"><a href="attorney.html" class="nav-link">Attorneys</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
-    
-    <div class="hero-wrap" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap" style="background-image: url('img/cajaCristiflex.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center">
           <div class="col-md-6 ftco-animate d-flex align-items-end">
           	<div class="text w-100">
-	            <h1 class="mb-4">Don't Feel Helpless We Fight for Justice</h1>
-	            <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-	            <p><a href="#" class="btn btn-primary py-3 px-4">Contact us</a> <a href="#" class="btn btn-white py-3 px-4">Read more</a></p>
+	            <h1 class="mb-4">Todo lo que necesita para su hogar</h1>
+	            <p class="mb-4">Un servicio eficiente y práctico para su mayor comodidad</p>
+				<p><a href="#" class="btn btn-primary py-3 px-4">Ingresa</a> 
+				<a href="QuienesSomos.php" class="btn btn-white py-3 px-4">Leer más</a></p>
             </div>
           </div>
           <a href="https://vimeo.com/45830194" class="img-video popup-vimeo d-flex align-items-center justify-content-center">
@@ -92,8 +28,8 @@
     						<span class="flaticon-lawyer"></span>
     					</div>
     					<div class="text">
-    						<h2>Expert Attorneys</h2>
-    						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    						<h2>Cuando llegará tu pedido</h2>
+    						<p>Nuestro sistema de compras te permite elegir el tiempo de entrega.</p>
     					</div>
     				</div>
     			</div>
@@ -103,8 +39,8 @@
     						<span class="flaticon-auction"></span>
     					</div>
     					<div class="text">
-    						<h2>Case Dismissed</h2>
-    						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    						<h2>¿Inseguro?</h2>
+    						<p>Sistemas de alta calidad en seguridad <br> norma ISO 27001.</p>
     					</div>
     				</div>
     			</div>
@@ -114,8 +50,8 @@
     						<span class="flaticon-court"></span>
     					</div>
     					<div class="text">
-    						<h2>Court Performance</h2>
-    						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    						<h2>Productos en perfecto estado</h2>
+    						<p>Entendemos que los productos deben llegar a salvo.</p>
     					</div>
     				</div>
     			</div>
@@ -125,8 +61,8 @@
     						<span class="flaticon-court"></span>
     					</div>
     					<div class="text">
-    						<h2>Court Performance</h2>
-    						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    						<h2>Atención al cliente</h2>
+    						<p>Nos destacamos por tener la mejor atención.</p>
     					</div>
     				</div>
     			</div>
@@ -138,7 +74,7 @@
 			<div class="container">
 				<div class="row no-gutters">
 					<div class="col-md-6 d-flex align-items-stretch">
-						<div class="img img-3 w-100 d-flex justify-content-center align-items-center" style="background-image: url(images/about-1.jpg); position: relative;">
+						<div class="img img-3 w-100 d-flex justify-content-center align-items-center" style="background-image: url(img/plasticos.gif); position: relative;">
 							<a href="https://vimeo.com/45830194" class="play-video popup-vimeo d-flex align-items-center justify-content-center">
 								<span class="fa fa-play"></span>
 	            </a>
@@ -147,10 +83,12 @@
 					<div class="col-md-6 wrap-about ftco-animate">
 						<div class="bg-light px-3 px-md-5 py-5 ">
 		          <div class="heading-section">
-		          	<span class="subheading">Welcome to Law Firm</span>
-		            <h2 class="mb-3">Why to Put Trust Your Trust In Law Firm</h2>
+		          	<span class="subheading">Bienvenido a Webplastic</span>
+		            <h2 class="mb-3">
+					Hemos reciclado más de 200.000 envases de botellas.
+					</h2>
 
-		            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+		            <p>Somos provedores de desechables pero queremos contribuir a mejorar nuestro planeta y su ecosistema</p>
 		          </div>
 
 		          <div class="row">
@@ -160,8 +98,8 @@
 			    						<span class="flaticon-lawyer"></span>
 			    					</div>
 			    					<div class="text pl-2">
-			    						<h2>Expert Attorneys</h2>
-			    						<p>A small river named Duden flows by their place and supplies</p>
+			    						<h2>Personal capacitado</h2>
+			    						<p>Todos nuestros miembros están capacitados en buenas practicas ambientales.</p>
 			    					</div>
 			    				</div>
 		          	</div>
@@ -171,8 +109,8 @@
 			    						<span class="flaticon-discount"></span>
 			    					</div>
 			    					<div class="text pl-2">
-			    						<h2>Great Discount</h2>
-			    						<p>A small river named Duden flows by their place and supplies</p>
+			    						<h2>Invertimos activamente</h2>
+			    						<p>Gran parte de nuestras ganacias son empleadas activos relacionados con nuestro bioma.</p>
 			    					</div>
 			    				</div>
 		          	</div>
@@ -182,8 +120,8 @@
 			    						<span class="flaticon-auction"></span>
 			    					</div>
 			    					<div class="text pl-2">
-			    						<h2>Legal Advisory</h2>
-			    						<p>A small river named Duden flows by their place and supplies</p>
+			    						<h2>Protejemos a nuestros usuarios</h2>
+			    						<p>Respetamos a cabalidad las políticas con nuestros clientes.</p>
 			    					</div>
 			    				</div>
 		          	</div>
@@ -193,8 +131,8 @@
 			    						<span class="flaticon-handcuffs"></span>
 			    					</div>
 			    					<div class="text pl-2">
-			    						<h2>Quick Charges</h2>
-			    						<p>A small river named Duden flows by their place and supplies</p>
+			    						<h2>Legalidad</h2>
+			    						<p>Tomamos en cuenta todos los aspectos legales para una mayor confiabilidad.</p>
 			    					</div>
 			    				</div>
 		          	</div>
@@ -213,8 +151,8 @@
             <div class="block-18 py-4 w-100">
             	<span class="icon flaticon-checklist"></span>
               <div class="text align-items-center">
-                <strong class="number" data-number="3000">0</strong>
-                <span>Trusted Clients</span>
+                <strong class="number" data-number="3250">0</strong>
+                <span>Cientes aproximados</span>
               </div>
             </div>
           </div>
@@ -222,8 +160,8 @@
             <div class="block-18 py-4 w-100">
             	<span class="icon flaticon-checklist"></span>
               <div class="text align-items-center">
-                <strong class="number" data-number="1000">0</strong>
-                <span>Honor's &amp; Awards</span>
+                <strong class="number" data-number="52">0</strong>
+                <span>Reconocimientos</span>
               </div>
             </div>
           </div>
@@ -231,8 +169,8 @@
             <div class="block-18 py-4 w-100">
             	<span class="icon flaticon-checklist"></span>
               <div class="text align-items-center">
-                <strong class="number" data-number="2000">0</strong>
-                <span>Expert Lawyers</span>
+                <strong class="number" data-number="865">0</strong>
+                <span>Expertos en nuestras instalaciones</span>
               </div>
             </div>
           </div>
@@ -240,8 +178,8 @@
             <div class="block-18 py-4 w-100">
             	<span class="icon flaticon-checklist"></span>
               <div class="text align-items-center">
-                <strong class="number" data-number="10540">0</strong>
-                <span>Successful Cases</span>
+                <strong class="number" data-number="8">0</strong>
+                <span>Reservas naturales </span>
               </div>
             </div>
           </div>
@@ -249,7 +187,7 @@
     	</div>
     </section>
 
-		<section class="ftco-section">
+<!--		<section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
@@ -332,43 +270,43 @@
     			</div>
     		</div>
     	</div>
-    </section>
+    </section>-->
 
-    <section class="ftco-section ftco-no-pt ftco-no-pb">
+    <section class="ftco-section ftco-no-pt ftco-no-pb mt-5">
       <div class="container-fluid px-md-4">
       	<div class="row justify-content-center pb-5">
           <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading">Cases</span>
-            <h2 class="mb-3">Recent Case Studies</h2>
+          	<span class="subheading">Productos</span>
+            <h2 class="mb-3">Conoce nuestros articulos más vendidos</h2>
           </div>
         </div>
       	<div class="row">
       		<div class="col-md-3 d-flex align-items-stretch">
       			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(images/case-1.jpg);">
+      				<div class="img" style="background-image: url(img/art1.jpg);">
       					<div class="text">
-	      					<h2>Business Law</h2>
-	      					<p>Far far away, behind the word</p>
+	      					<h2>Cello hermético</h2>
+	      					<p></p>
 	      				</div>
       				</div>
       			</div>
       		</div>
       		<div class="col-md-6 d-flex align-items-stretch">
       			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(images/case-2.jpg);">
+      				<div class="img" style="background-image: url(img/art2.jpg);">
       					<div class="text">
-	      					<h2>Criminal Offense</h2>
-	      					<p>Far far away, behind the word</p>
+	      					<h2>Copa venenciana</h2>
+	      					<p></p>
 	      				</div>
       				</div>
       			</div>
       		</div>
       		<div class="col-md-3 d-flex align-items-stretch">
       			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(images/case-3.jpg);">
+      				<div class="img" style="background-image: url(img/art3.jpg);">
       					<div class="text">
-	      					<h2>Dispute Resolution</h2>
-	      					<p>Far far away, behind the word</p>
+	      					<h2>Aluminio</h2>
+	      					<p></p>
 	      				</div>
       				</div>
       			</div>
@@ -376,40 +314,40 @@
 
       		<div class="col-md-3 d-flex align-items-stretch">
       			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(images/case-4.jpg);">
+      				<div class="img" style="background-image: url(img/art4.jpg);">
       					<div class="text">
-	      					<h2>Business Law</h2>
-	      					<p>Far far away, behind the word</p>
+	      					<h2>Decorados</h2>
+	      					<p></p>
 	      				</div>
       				</div>
       			</div>
       		</div>
       		<div class="col-md-3 d-flex align-items-stretch">
       			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(images/case-5.jpg);">
+      				<div class="img" style="background-image: url(img/art5.jpg);">
       					<div class="text">
-	      					<h2>Business Law</h2>
-	      					<p>Far far away, behind the word</p>
+	      					<h2>Bandejas extra</h2>
+	      					<p></p>
 	      				</div>
       				</div>
       			</div>
       		</div>
       		<div class="col-md-3 d-flex align-items-stretch">
       			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(images/case-6.jpg);">
+      				<div class="img" style="background-image: url(img/art6.jpg);">
       					<div class="text">
-	      					<h2>Business Law</h2>
-	      					<p>Far far away, behind the word</p>
+	      					<h2>Cubiertos empacados</h2>
+	      					<p></p>
 	      				</div>
       				</div>
       			</div>
       		</div>
       		<div class="col-md-3 d-flex align-items-stretch">
       			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(images/case-7.jpg);">
+      				<div class="img" style="background-image: url(img/art7.jpg);">
       					<div class="text">
-	      					<h2>Business Law</h2>
-	      					<p>Far far away, behind the word</p>
+	      					<h2>Bandeja</h2>
+	      					<p></p>
 	      				</div>
       				</div>
       			</div>
@@ -418,15 +356,15 @@
       </div>
     </section>
 
-  
+<!--  
     <section class="ftco-section testimony-section">
     	<div class="img img-bg" style="background-image: url(images/bg_4.jpg);"></div>
     	<div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-          	<span class="subheading">Testimonial</span>
-            <h2 class="mb-3">Happy Clients</h2>
+          	<span class="subheading">Testimonios</span>
+            <h2 class="mb-3">Clientes felices</h2>
           </div>
         </div>
         <div class="row ftco-animate">
@@ -669,103 +607,6 @@
           </div>
         </div>
       </div>
-    </section>	
+    </section>	-->
 
-    <footer class="ftco-footer">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-sm-12 col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2 logo"><a href="#">Law Firm</a></h2>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
-              <ul class="ftco-footer-social list-unstyled mt-2">
-                <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Explore</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Practice Areas</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Cases</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Legal</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Join us</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Privacy &amp; Policy</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Term &amp; Conditions</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Company</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About Us</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Careers</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid px-0 py-5 bg-black">
-      	<div class="container">
-      		<div class="row">
-	          <div class="col-md-12">
-		
-	            <p class="mb-0" style="color: rgba(255,255,255,.5);"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
-	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-	          </div>
-	        </div>
-      	</div>
-      </div>
-    </footer>
-    
-  
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
-</html>
+	<?php require'footer.php';?>
