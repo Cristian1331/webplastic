@@ -34,7 +34,7 @@
           </div>
           <div class="col-sm-12 col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">¿Alguna pregunta?</h2>
+            	<h2 class="ftco-heading-2">¿Cómo encontrarnos?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
@@ -46,18 +46,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid px-0 py-5 bg-black">
-      	<div class="container">
-      		<div class="row">
-	          <div class="col-md-12">
-		
-	            <p class="mb-0" style="color: rgba(255,255,255,.5);"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
-	  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-	          </div>
-	        </div>
-      	</div>
-      </div>
+
     </footer>
     
   
