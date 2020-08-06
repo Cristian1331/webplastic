@@ -56,7 +56,7 @@
 	          <li class="nav-item"><a href="QuienesSomos.php" class="nav-link">¿Quiénes somos?</a></li>
 	          <li class="nav-item"><a href="Catalogo.php" class="nav-link">Catálogo</a></li>
 	          <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="Carrito.php" class="nav-link">Carrito</a></li>
+	          <!--<li class="nav-item"><a href="Carrito.php" class="nav-link">Carrito</a></li>-->
 	          <li class="nav-item"><a href="Registro.php" class="nav-link">Registrarse</a></li>
 	          <li class="nav-item"><a href="Ingreso.php" class="nav-link">Ingresar</a></li>
 	        </ul>
