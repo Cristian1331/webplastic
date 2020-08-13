@@ -7,12 +7,12 @@
 <div class="col-md-6 half ftco-animate" style="margin: 10px auto;">
 <h2 class="mb-4">Bienvenid@</h2>
 <form action="#" class="appointment">
-  <div class="form-group col-md-12 m">
-	  <label for="inputEmail4">Nombre</label>
+  	<div class="form-group col-md-12">
+	  <label for="">Nombre</label>
 	  <input type="text" class="form-control" id="nombre">
 	</div>
-	<div class="form-group col-md-12 m">
-	  <label for="inputAddress2">Correo</label>
+	<div class="form-group col-md-12">
+	  <label for="inputAddress1">Correo</label>
 	  <input type="text" class="form-control" id="correo">
 	</div>
 	<div class="form-row">

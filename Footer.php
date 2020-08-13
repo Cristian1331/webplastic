@@ -28,7 +28,7 @@
               <ul class="list-unstyled">
                 <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
                 <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Políticas de privacidad</a></li>
-                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Términos y condiciones</a></li>
+                <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Términos y <br> condiciones</a></li>
               </ul>
             </div>
           </div>
