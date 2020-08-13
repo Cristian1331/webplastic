@@ -1,0 +1,97 @@
+<?php require'Nav.php';?>
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/blogreciclar.jpg');" data-stellar-background-ratio="1">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate mb-5 text-center">
+          	<p class="breadcrumbs mb-0"><span class="mr-2"><a href="blog.php">Blog <i class="fa fa-chevron-right"></i></a></span>¿Qué podemos reciclar? <span><i class="fa fa-chevron-right"></i></span></p>
+            <h1 class="mb-0 bread">¿Qué podemos reciclar?</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+                <div class="col-md-12 text-center pl-0 pr-0">
+                    <div class="text text-center element-animate">
+                        <span class="post-meta d-block mt-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12 de julio de 2020</font></font></span>  
+                        <div class="col-md-12 text-left pl-0 pr-0 mt-5">
+                          <table class="hidden-on-desktop">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <h3><strong>Envases de plástico</strong></h3>
+                                  <p>Reducir su consumo, reutilizar y reciclar son las tres acciones básicas para reducir su impacto, ya que el plástico tarda alrededor de 700 años en degradarse. Por eso, es importante depositar en elcontenedor amarillo los envases reciclables como:</p>                       
+                                  <ul>
+                                    <li>Botellas de plástico.</li>
+                                    <li>Bote de detergente, champú, gel…</li>
+                                    <li>Las bolsas de patatas.</li>
+                                    <li>Tapas y tapones de plástico</li>
+                                    <li>Bolsas de plástico (excepto las bolsas de basura)</li>
+                                    <li>Tarrinas y tapas de yogurt</li>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <h3><strong>Briks</strong></h3>
+                                  <p>¿Sabías que con 6 briks puede hacerse una caja de zapatos? Reciclar el<strong> brik de leche o de zumo </strong>es muy sencillo. Tan solo debemos depositarlo en el&nbsp;<strong>contenedor amarillo </strong>y así conseguir darles una segunda vida.</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <h3><strong>Latas</strong></h3>
+                                  <p>Este tipo de envase está siempre presente en nuestra cocina. ¿Quién no tiene una lata de refresco o de conservas en el frigorífico?&nbsp; Las latas están compuestas de aluminio y se pueden reciclar un número ilimitado de veces. ¡Al <strong>contenedor amarillo</strong>!</p>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <h3><strong>Envases de papel y cartón</strong></h3>
+                                  <p>Todos los materiales de papel y cartón deben ir al contenedor azul para ser reciclados y ayudar a reducir la sobreexplotación de los recursos naturales, algunos de estos son:</p>
+                                  <ul>
+                                    <li>Revistas</li>
+                                    <li>Periódicos viejos</li>
+                                    <li>Cajas de cereales</li>
+                                    <li>Cajas de zapatos</li>
+                                    <li>Papel de envolver</li>
+                                    <li>Cuadernos</li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <h3><strong>Vidrio</strong></h3>
+                                  <p>Este material se puede volver a reutilizar mediante un proceso de lavado de desechos o a través de su fundición y puede ser reciclado al 100% una cantidad indefinida de veces.&nbsp;Para ello debemos separarlos del resto de materiales. Al contenedor verde! Aquí debemos depositar:</p>
+                                  <ul>
+                                    <li>Botellas de vidrio (vino, cava…)</li>
+                                    <li>Frascos de vidrio (como perfumes o colonias)&nbsp;</li>
+                                    <li>Tarros de alimentos (mermeladas, conservas, etc.)</li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <h3><strong>Pilas y baterías</strong></h3>
+                                  <p>Podemos encontrarlas a diario en el mando de la tele, el ratón del ordenador o en la maquinilla de afeitar y nunca debemos tirarlas a la basura con el resto de residuos. Tienen componentes altamente contaminantes, por lo que es muy importante llevarlas a los contenedores de residuos peligrosos que tengamos más cerca de casa o al punto limpio</p>
+                                </td>
+                              </tr>
+                              <tr class="last">
+                                <td>
+                                  <h3><strong>Otros</strong></h3>
+                                  <ul>
+                                    <li>Electrodomésticos</li>
+                                    <li>Aparatos electrónicos</li>
+                                    <li>Bombillas</li>
+                                    <li>Aceites usados</li>
+                                    <li>Muebles</li>
+                                  </ul>
+                                  <p>Estos productos y muchos otros también se pueden reciclar gracias a los <strong>puntos limpios</strong>. La ropa también es reciclable, simplemente habrá que llevarla a los puntos habilitados para ello.</p>
+                                  <p>Para más información sobre cada uno de estos productos, puedes visitar Dudas de reciclaje, donde hablamos de cada uno de estos materiales y os damos consejos sobre su reutilización y reciclaje.</p>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+    <?php require'footer.php';?>
