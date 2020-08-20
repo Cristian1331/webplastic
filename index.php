@@ -1,612 +1,315 @@
-<?php require'Nav.php';?>
-    
-    <div class="hero-wrap" style="background-image: url('img/cajaCristiflex.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center">
-          <div class="col-md-6 ftco-animate d-flex align-items-end">
-          	<div class="text w-100">
-	            <h1 class="mb-4">Todo lo que necesita para su hogar</h1>
-	            <p class="mb-4">Un servicio eficiente y práctico para su mayor comodidad</p>
-				<p><a href="#" class="btn btn-primary py-3 px-4">Ingresa</a> 
-				<a href="QuienesSomos.php" class="btn btn-white py-3 px-4">Leer más</a></p>
-            </div>
-          </div>
-          <a href="https://vimeo.com/45830194" class="img-video popup-vimeo d-flex align-items-center justify-content-center">
-          	<span class="fa fa-play"></span>
-          </a>
-        </div>
-      </div>
-    </div>
+<?php
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP
+ *
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014 - 2017, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
+ * @copyright	Copyright (c) 2014 - 2017, British Columbia Institute of Technology (http://bcit.ca/)
+ * @license	http://opensource.org/licenses/MIT	MIT License
+ * @link	https://codeigniter.com
+ * @since	Version 1.0.0
+ * @filesource
+ */
 
-    <section class="ftco-intro">
-    	<div class="container-fluid">
-    		<div class="row no-gutters">
-    			<div class="col-md-3 d-flex">
-    				<div class="intro aside-stretch d-lg-flex w-100">
-    					<div class="icon">
-    						<span class="flaticon-lawyer"></span>
-    					</div>
-    					<div class="text">
-    						<h2>Cuando llegará tu pedido</h2>
-    						<p>Nuestro sistema de compras te permite elegir el tiempo de entrega.</p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-md-3 d-flex">
-    				<div class="intro color-1 d-lg-flex w-100">
-    					<div class="icon">
-    						<span class="flaticon-auction"></span>
-    					</div>
-    					<div class="text">
-    						<h2>¿Inseguro?</h2>
-    						<p>Sistemas de alta calidad en seguridad <br> norma ISO 27001.</p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-md-3 d-flex">
-    				<div class="intro color-2 d-lg-flex w-100">
-    					<div class="icon">
-    						<span class="flaticon-court"></span>
-    					</div>
-    					<div class="text">
-    						<h2>Productos en perfecto estado</h2>
-    						<p>Entendemos que los productos deben llegar a salvo.</p>
-    					</div>
-    				</div>
-    			</div>
-    			<div class="col-md-3 d-flex">
-    				<div class="intro color-3 d-lg-flex w-100">
-    					<div class="icon">
-    						<span class="flaticon-court"></span>
-    					</div>
-    					<div class="text">
-    						<h2>Atención al cliente</h2>
-    						<p>Nos destacamos por tener la mejor atención.</p>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ */
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
 
-    <section class="ftco-section ftco-no-pb ftco-no-pt">
-			<div class="container">
-				<div class="row no-gutters">
-					<div class="col-md-6 d-flex align-items-stretch">
-						<div class="img img-3 w-100 d-flex justify-content-center align-items-center" style="background-image: url(img/plasticos.gif); position: relative;">
-							<a href="https://vimeo.com/45830194" class="play-video popup-vimeo d-flex align-items-center justify-content-center">
-								<span class="fa fa-play"></span>
-	            </a>
-						</div>
-					</div>
-					<div class="col-md-6 wrap-about ftco-animate">
-						<div class="bg-light px-3 px-md-5 py-5 ">
-		          <div class="heading-section">
-		          	<span class="subheading">Bienvenido a Webplastic</span>
-		            <h2 class="mb-3">
-					Hemos reciclado más de 200.000 envases de botellas.
-					</h2>
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
+switch (ENVIRONMENT)
+{
+	case 'development':
+		error_reporting(-1);
+		ini_set('display_errors', 1);
+	break;
 
-		            <p>Somos provedores de desechables pero queremos contribuir a mejorar nuestro planeta y su ecosistema</p>
-		          </div>
+	case 'testing':
+	case 'production':
+		ini_set('display_errors', 0);
+		if (version_compare(PHP_VERSION, '5.3', '>='))
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
+		}
+		else
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
+		}
+	break;
 
-		          <div class="row">
-		          	<div class="col-lg-6">
-		          		<div class="services d-flex w-100">
-			    					<div class="icon d-flex align-items-center justify-content-center">
-			    						<span class="flaticon-lawyer"></span>
-			    					</div>
-			    					<div class="text pl-2">
-			    						<h2>Personal capacitado</h2>
-			    						<p>Todos nuestros miembros están capacitados en buenas practicas ambientales.</p>
-			    					</div>
-			    				</div>
-		          	</div>
-		          	<div class="col-lg-6">
-		          		<div class="services d-flex w-100">
-			    					<div class="icon d-flex align-items-center justify-content-center">
-			    						<span class="flaticon-discount"></span>
-			    					</div>
-			    					<div class="text pl-2">
-			    						<h2>Invertimos activamente</h2>
-			    						<p>Gran parte de nuestras ganacias son empleadas activos relacionados con nuestro bioma.</p>
-			    					</div>
-			    				</div>
-		          	</div>
-		          	<div class="col-lg-6">
-		          		<div class="services d-flex w-100">
-			    					<div class="icon d-flex align-items-center justify-content-center">
-			    						<span class="flaticon-auction"></span>
-			    					</div>
-			    					<div class="text pl-2">
-			    						<h2>Protejemos a nuestros usuarios</h2>
-			    						<p>Respetamos a cabalidad las políticas con nuestros clientes.</p>
-			    					</div>
-			    				</div>
-		          	</div>
-		          	<div class="col-lg-6">
-		          		<div class="services d-flex w-100">
-			    					<div class="icon d-flex align-items-center justify-content-center">
-			    						<span class="flaticon-handcuffs"></span>
-			    					</div>
-			    					<div class="text pl-2">
-			    						<h2>Legalidad</h2>
-			    						<p>Tomamos en cuenta todos los aspectos legales para una mayor confiabilidad.</p>
-			    					</div>
-			    				</div>
-		          	</div>
-		          </div>
-	          </div>
+	default:
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'The application environment is not set correctly.';
+		exit(1); // EXIT_ERROR
+}
 
-					</div>
-				</div>
-			</div>
-		</section>
+/*
+ *---------------------------------------------------------------
+ * SYSTEM DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" directory.
+ * Set the path if it is not in the same directory as this file.
+ */
+	$system_path = 'system';
 
-		<section class="ftco-counter ftco-section ftco-no-pt mt-4 ftco-no-pb img" id="section-counter">
-    	<div class="container">
-    		<div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch counter-wrap ftco-animate">
-            <div class="block-18 py-4 w-100">
-            	<span class="icon flaticon-checklist"></span>
-              <div class="text align-items-center">
-                <strong class="number" data-number="3250">0</strong>
-                <span>Cientes aproximados</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch counter-wrap ftco-animate">
-            <div class="block-18 py-4 w-100">
-            	<span class="icon flaticon-checklist"></span>
-              <div class="text align-items-center">
-                <strong class="number" data-number="52">0</strong>
-                <span>Reconocimientos</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch counter-wrap ftco-animate">
-            <div class="block-18 py-4 w-100">
-            	<span class="icon flaticon-checklist"></span>
-              <div class="text align-items-center">
-                <strong class="number" data-number="865">0</strong>
-                <span>Expertos en nuestras instalaciones</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch counter-wrap ftco-animate">
-            <div class="block-18 py-4 w-100">
-            	<span class="icon flaticon-checklist"></span>
-              <div class="text align-items-center">
-                <strong class="number" data-number="8">0</strong>
-                <span>Reservas naturales </span>
-              </div>
-            </div>
-          </div>
-        </div>
-    	</div>
-    </section>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * directory than the default one you can set its name here. The directory
+ * can also be renamed or relocated anywhere on your server. If you do,
+ * use an absolute (full) server path.
+ * For more info please see the user guide:
+ *
+ * https://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ */
+	$application_folder = 'application';
 
-<!--		<section class="ftco-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Practice Area</span>
-            <h2>What We Cover</h2>
-          </div>
-        </div>
-    		<div class="row">
-    			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-    				<div class="services-2 text-center">
-    					<div class="icon-wrap">
-    						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-stats"></span></div>
-	    					<div class="icon d-flex align-items-center justify-content-center">
-	    						<span class="flaticon-stats"></span>
-	    					</div>
-    					</div>
-    					<h2>Business Law</h2>
-    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-    				</div>
-    			</div>
-    			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-    				<div class="services-2 text-center">
-    					<div class="icon-wrap">
-    						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-family"></span></div>
-	    					<div class="icon d-flex align-items-center justify-content-center">
-	    						<span class="flaticon-family"></span>
-	    					</div>
-    					</div>
-    					<h2>Family Law</h2>
-  						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-    				</div>
-    			</div>
-    			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-    				<div class="services-2 text-center">
-    					<div class="icon-wrap">
-    						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-handcuffs"></span></div>
-	    					<div class="icon d-flex align-items-center justify-content-center">
-	    						<span class="flaticon-handcuffs"></span>
-	    					</div>
-    					</div>
-    					<h2>Criminal Law</h2>
-  						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-    				</div>
-    			</div>
-    			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-    				<div class="services-2 text-center">
-    					<div class="icon-wrap">
-    						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-stay-home"></span></div>
-	    					<div class="icon d-flex align-items-center justify-content-center">
-	    						<span class="flaticon-stay-home"></span>
-	    					</div>
-    					</div>
-    					<h2>Real Estate Law</h2>
-    					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-    				</div>
-    			</div>
-    			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-    				<div class="services-2 text-center">
-    					<div class="icon-wrap">
-    						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-injury"></span></div>
-	    					<div class="icon d-flex align-items-center justify-content-center">
-	    						<span class="flaticon-injury"></span>
-	    					</div>
-    					</div>
-    					<h2>Personal Injury</h2>
-  						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-    				</div>
-    			</div>
-    			<div class="col-md-4 d-flex align-items-stretch ftco-animate">
-    				<div class="services-2 text-center">
-    					<div class="icon-wrap">
-    						<div class="mini-icon d-flex align-items-center justify-content-center"><span class="flaticon-auction"></span></div>
-	    					<div class="icon d-flex align-items-center justify-content-center">
-	    						<span class="flaticon-auction"></span>
-	    					</div>
-    					</div>
-    					<h2>Judicial Law</h2>
-  						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </section>-->
+/*
+ *---------------------------------------------------------------
+ * VIEW DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want to move the view directory out of the application
+ * directory, set the path to it here. The directory can be renamed
+ * and relocated anywhere on your server. If blank, it will default
+ * to the standard location inside your application directory.
+ * If you do move this, use an absolute (full) server path.
+ *
+ * NO TRAILING SLASH!
+ */
+	$view_folder = '';
 
-    <section class="ftco-section ftco-no-pt ftco-no-pb mt-5">
-      <div class="container-fluid px-md-4">
-      	<div class="row justify-content-center pb-5">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-          	<span class="subheading">Productos</span>
-            <h2 class="mb-3">Conoce nuestros articulos más vendidos</h2>
-          </div>
-        </div>
-      	<div class="row">
-      		<div class="col-md-3 d-flex align-items-stretch">
-      			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(img/art1.jpg);">
-      					<div class="text">
-	      					<h2>Cello hermético</h2>
-	      					<p></p>
-	      				</div>
-      				</div>
-      			</div>
-      		</div>
-      		<div class="col-md-6 d-flex align-items-stretch">
-      			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(img/art2.jpg);">
-      					<div class="text">
-	      					<h2>Copa venenciana</h2>
-	      					<p></p>
-	      				</div>
-      				</div>
-      			</div>
-      		</div>
-      		<div class="col-md-3 d-flex align-items-stretch">
-      			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(img/art3.jpg);">
-      					<div class="text">
-	      					<h2>Aluminio</h2>
-	      					<p></p>
-	      				</div>
-      				</div>
-      			</div>
-      		</div>
 
-      		<div class="col-md-3 d-flex align-items-stretch">
-      			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(img/art4.jpg);">
-      					<div class="text">
-	      					<h2>Decorados</h2>
-	      					<p></p>
-	      				</div>
-      				</div>
-      			</div>
-      		</div>
-      		<div class="col-md-3 d-flex align-items-stretch">
-      			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(img/art5.jpg);">
-      					<div class="text">
-	      					<h2>Bandejas extra</h2>
-	      					<p></p>
-	      				</div>
-      				</div>
-      			</div>
-      		</div>
-      		<div class="col-md-3 d-flex align-items-stretch">
-      			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(img/art6.jpg);">
-      					<div class="text">
-	      					<h2>Cubiertos empacados</h2>
-	      					<p></p>
-	      				</div>
-      				</div>
-      			</div>
-      		</div>
-      		<div class="col-md-3 d-flex align-items-stretch">
-      			<div class="case-wrap d-flex">
-      				<div class="img" style="background-image: url(img/art7.jpg);">
-      					<div class="text">
-	      					<h2>Bandeja</h2>
-	      					<p></p>
-	      				</div>
-      				</div>
-      			</div>
-      		</div>
-      	</div>
-      </div>
-    </section>
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here. For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT: If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller. Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ */
+	// The directory name, relative to the "controllers" directory.  Leave blank
+	// if your controller is not in a sub-directory within the "controllers" one
+	// $routing['directory'] = '';
 
-<!--  
-    <section class="ftco-section testimony-section">
-    	<div class="img img-bg" style="background-image: url(images/bg_4.jpg);"></div>
-    	<div class="overlay"></div>
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-          	<span class="subheading">Testimonios</span>
-            <h2 class="mb-3">Clientes felices</h2>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap py-4">
-                	<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
-                  <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="d-flex align-items-center">
-                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                    	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
-		                  </div>
-	                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-		
-		<section class="ftco-appointment ftco-section img" style="background-image: url(images/bg_2.jpg);">
-			<div class="overlay"></div>
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-6 pr-md-5">
-    				<div class="heading-section heading-section-white">
-	            <h2 class="mb-3">We Have Great Results</h2>
-	            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-	            <div class="row mt-md-4">
-	            	<div class="col-lg-6">
-	            		<div class="services d-flex w-100">
-			    					<div class="icon icon-2 d-flex align-items-center justify-content-center">
-			    						<span class="flaticon-medal"></span>
-			    					</div>
-			    					<div class="text pl-3">
-			    						<h2>Award Winning</h2>
-			    						<p>A small river named Duden flows by their place and supplies</p>
-			    					</div>
-			    				</div>
-	            	</div>
-	            	<div class="col-lg-6">
-	            		<div class="services d-flex w-100">
-			    					<div class="icon icon-2 d-flex align-items-center justify-content-center">
-			    						<span class="flaticon-auction"></span>
-			    					</div>
-			    					<div class="text pl-3">
-			    						<h2>60 Years of Experience</h2>
-			    						<p>A small river named Duden flows by their place and supplies</p>
-			    					</div>
-			    				</div>
-	            	</div>
-	            	<div class="col-lg-12">
-	            		<div class="services d-flex w-100">
-			    					<div class="icon icon-2 d-flex align-items-center justify-content-center">
-			    						<span class="flaticon-lawyer"></span>
-			    					</div>
-			    					<div class="text pl-3">
-			    						<h2>Best Attorneys team</h2>
-			    						<p>A small river named Duden flows by their place and supplies</p>
-			    					</div>
-			    				</div>
-	            	</div>
-	            </div>
-    				</div>
-    			</div>
-    			<div class="col-md-6 half ftco-animate">
-    				<h2 class="mb-4">Free Case Consultation</h2>
-    				<form action="#" class="appointment">
-    					<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-			              <input type="text" class="form-control" placeholder="Your Name">
-			            </div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-			              <input type="text" class="form-control" placeholder="Email">
-			            </div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group">
-			    					<div class="form-field">
-	          					<div class="select-wrap">
-	                      <div class="icon"><span class="fa fa-chevron-down"></span></div>
-	                      <select name="" id="" class="form-control">
-	                      	<option value="">Practice Areas</option>
-	                        <option value="">Business Law</option>
-	                        <option value="">Criminal Law</option>
-	                        <option value="">Family Law</option>
-	                        <option value="">Judicial Law</option>
-	                        <option value="">Personal Injury</option>
-	                        <option value="">Real Estate Law</option>
-	                      </select>
-	                    </div>
-			              </div>
-			    				</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group">
-			              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-			            </div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group">
-			              <input type="submit" value="Send message" class="btn btn-primary py-3 px-4">
-			            </div>
-								</div>
-    					</div>
-	          </form>
-    			</div>
-    		</div>
-    	</div>
-    </section>
+	// The controller class file name.  Example:  mycontroller
+	// $routing['controller'] = '';
 
-    <section class="ftco-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Blog</span>
-            <h2>Recent Blog</h2>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <div class="text text-center">
-              	<a href="blog-single.html" class="block-20 img d-flex align-items-center" style="background-image: url('images/image_1.jpg');">
-              		<div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
-	                	<div>
-	                		<span class="day">02</span>
-	                		<span class="mos">June</span>
-	                		<span class="yr">2020</span>
-	                	</div>
-	                </div>
-	              </a>
-                <h3 class="heading mb-3"><a href="#">Social Media Risks To Mental Health</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <div class="text text-center">
-              	<a href="blog-single.html" class="block-20 img d-flex align-items-center" style="background-image: url('images/image_2.jpg');">
-              		<div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
-	                	<div>
-	                		<span class="day">02</span>
-	                		<span class="mos">June</span>
-	                		<span class="yr">2020</span>
-	                	</div>
-	                </div>
-	              </a>
-                <h3 class="heading mb-3"><a href="#">Social Media Risks To Mental Health</a></h3>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <div class="text text-center">
-              	<a href="blog-single.html" class="block-20 img d-flex align-items-center" style="background-image: url('images/image_3.jpg');">
-              		<div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
-	                	<div>
-	                		<span class="day">02</span>
-	                		<span class="mos">June</span>
-	                		<span class="yr">2020</span>
-	                	</div>
-	                </div>
-	              </a>
-                <h3 class="heading mb-3"><a href="#">Social Media Risks To Mental Health</a mb-3></h3>
-								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>              
-							</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>	-->
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
 
-	<?php require'footer.php';?>
+
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
+
+
+
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
+
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
+
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
+
+	if (($_temp = realpath($system_path)) !== FALSE)
+	{
+		$system_path = $_temp.DIRECTORY_SEPARATOR;
+	}
+	else
+	{
+		// Ensure there's a trailing slash
+		$system_path = strtr(
+			rtrim($system_path, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		).DIRECTORY_SEPARATOR;
+	}
+
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		exit(3); // EXIT_CONFIG
+	}
+
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+
+	// Path to the system directory
+	define('BASEPATH', $system_path);
+
+	// Path to the front controller (this file) directory
+	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
+
+	// Name of the "system" directory
+	define('SYSDIR', basename(BASEPATH));
+
+	// The path to the "application" directory
+	if (is_dir($application_folder))
+	{
+		if (($_temp = realpath($application_folder)) !== FALSE)
+		{
+			$application_folder = $_temp;
+		}
+		else
+		{
+			$application_folder = strtr(
+				rtrim($application_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
+	{
+		$application_folder = BASEPATH.strtr(
+			trim($application_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
+
+	// The path to the "views" directory
+	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.'views';
+	}
+	elseif (is_dir($view_folder))
+	{
+		if (($_temp = realpath($view_folder)) !== FALSE)
+		{
+			$view_folder = $_temp;
+		}
+		else
+		{
+			$view_folder = strtr(
+				rtrim($view_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.strtr(
+			trim($view_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
