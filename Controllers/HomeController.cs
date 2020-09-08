@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Web;
 using System.Web.Mvc;
 
@@ -34,6 +35,11 @@ namespace WebPlastic.Controllers
         }
 
         public ActionResult Blog2()
+        {
+            return View();
+        }
+
+        public ActionResult Blog223232()
         {
             return View();
         }
