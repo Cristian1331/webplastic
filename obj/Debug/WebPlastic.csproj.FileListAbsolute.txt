@@ -170,3 +170,7 @@ C:\xampp\htdocs\webplastic\obj\Debug\WebPlastic.csproj.CoreCompileInputs.cache
 C:\xampp\htdocs\webplastic\obj\Debug\WebPlastic.csproj.CopyComplete
 C:\xampp\htdocs\webplastic\obj\Debug\WebPlastic.dll
 C:\xampp\htdocs\webplastic\obj\Debug\WebPlastic.pdb
+C:\xampp\htdocs\webplastic\bin\EntityFramework.dll
+C:\xampp\htdocs\webplastic\bin\EntityFramework.SqlServer.dll
+C:\xampp\htdocs\webplastic\bin\EntityFramework.xml
+C:\xampp\htdocs\webplastic\bin\EntityFramework.SqlServer.xml
