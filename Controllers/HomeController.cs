@@ -85,7 +85,7 @@ namespace WebPlastic.Controllers
                     {
                         SentEmail correoCreacion = new SentEmail();
                         string bodyCorreo = correoCreacion.EmailForNewUser(model.Name, model.Last, model.UserName, password);
-                        correoCreacion.SendEmailForNewUser(model.Email, "Creación de Usuario", "soporte@metnet.co", bodyCorreo, "soporte@metnet.co", "soporte@metnet.co", "13A132b17#", "");
+                        correoCreacion.SendEmailForNewUser(model.Email, "Creación de Usuario", "webplastic@hotmail.com", bodyCorreo, "webplastic@hotmail.com", "webplastic@hotmail.com", "hola1234", "");
 
                     }
                 
@@ -131,14 +131,8 @@ namespace WebPlastic.Controllers
                                     Session["Last"] = row["Last"].ToString();
                                     Session["Email"] = row["Email"].ToString();
                                     Session["Profile"] = row["Profile"].ToString();
-                                    if (Convert.ToInt32(Session["idProfile"]) == 1)
-                                    {
-                                        return RedirectToAction("IndexUser", "administrator");
-                                    }
-                                    else
-                                    {
-                                        return RedirectToAction("IndexUser", "administrator");
-                                    }
+                                    
+                                    return RedirectToAction("Index", "Home");
                             }
                             else
                             {
@@ -156,6 +150,15 @@ namespace WebPlastic.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        public ActionResult Logout()
+        {
+            Session["idUser"] = null;
+            Session["idProfile"] = null;
+            Session["Name"] = null;
+            return RedirectToAction("Index");
+        }
+
 
         public string GetMACAddress()
         {

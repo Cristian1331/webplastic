@@ -150,6 +150,8 @@
     <Content Include="Content\css\animate.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\flaticon.css" />
+    <Content Include="Content\css\icomoon\fonts\icomoon.svg" />
+    <Content Include="Content\css\icomoon\styles.min.css" />
     <Content Include="Content\css\magnific-popup.css" />
     <Content Include="Content\css\owl.carousel.min.css" />
     <Content Include="Content\css\owl.theme.default.min.css" />
@@ -212,6 +214,7 @@
     <Content Include="Content\img\vasos-espumados-darnel.jpg" />
     <Content Include="Content\img\vasos-rigidos-gal-1.jpg" />
     <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\filtro.js" />
     <Content Include="Content\js\google-map.js" />
     <Content Include="Content\js\jquery-migrate-3.0.1.min.js" />
     <Content Include="Content\js\jquery.animateNumber.min.js" />
@@ -331,6 +334,10 @@
     <Content Include="Content\scss\bootstrap\_utilities.scss" />
     <Content Include="Content\scss\bootstrap\_variables.scss" />
     <Content Include="Content\scss\style.scss" />
+    <Content Include="Content\css\icomoon\fonts\icomoon.eot" />
+    <Content Include="Content\css\icomoon\fonts\icomoon.ttf" />
+    <Content Include="Content\css\icomoon\fonts\icomoon.woff" />
+    <Content Include="Content\css\icomoon\selection.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -348,6 +355,9 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Views\Home\Blog.cshtml" />
     <Content Include="Views\Administrator\IndexUser.cshtml" />
+    <Content Include="Views\Administrator\MyProfile.cshtml" />
+    <Content Include="Views\Administrator\MyCart.cshtml" />
+    <Content Include="Views\Administrator\CreateArticle.cshtml" />
     <None Include="Views\Home\Blog1.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contactanos.cshtml" />

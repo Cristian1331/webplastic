@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "CreateArticle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <section class="ftco-appointment ftco-section img pt-1" style="background-image: url(~/Content/images/bg_2.jpg);">
+        <div class="overlay"> </div>
+        <div class="col-md-4 half ftco-animate" style="margin: 10px auto;">
+            <h2 class="mb-4 m-auto">Mis datos</h2>
+            <form action="@Url.Action("Login")" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h4 class="h4">Imagen de Perfil</h4>
+                        <img src="~/Content/images/avatar.jpg" id="imgUser" class="img-thumbnail" width="150" height="150" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 text-center"></div>
+                    <div class="col-sm-4">
+                        <div class="input-group-prepend">
+                            <label class="custom-file-label" for="chooseflies">Buscar</label>
+                        </div>
+                        <input type="file" name="image" class="custom-file-input" id="customFile"
+                               onchange="document.getElementById('imgUser').src = window.URL.createObjectURL(this.files[0]);
+                                                                    document.getElementById('chooseflies').innerHTML = $('#customFile').val()
+                                                                ">
+                    </div>
+                    <div class="col-sm-4 text-center"></div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12 p-0">
+                        <label for="inputEmail4">Nombre del articulo</label>
+                        <input type="text" class="form-control" name="Name">
+                    </div>
+                    <div class="form-group col-md-12 p-0">
+                        <label for="inputAddress2">Descripción</label>
+                        <input type="text" class="form-control" name="Password">
+                    </div>
+                    <div class="form-group col-md-12 p-0">
+                        <label for="inputAddress2">Precio</label>
+                        <input type="number" class="form-control" name="price">
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group col-md-12">
+                            <input type="submit" value="Enviar" class="btn btn-primary py-3 px-4">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>

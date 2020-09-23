@@ -1,10 +1,111 @@
-﻿
-@{
-    ViewBag.Title = "Catalogo";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@{ ViewBag.Title = "Catalogo";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('~/Content/images/bg_5.jpg');" data-stellar-background-ratio="0.5">
+<style type="text/css">
+
+
+    .containerx {
+        background: #fff;
+        width: 95%;
+        max-width: 1000px;
+        margin: 20px auto;
+    }
+
+    .menu ul {
+        list-style: none;
+        width: 100%;
+        display: table;
+    }
+
+        .menu ul li {
+            display: table-cell;
+            width: calc(30px * 5)
+        }
+
+            .menu ul li:hover {
+                background: rgba(0,0,0,.9);
+            }
+
+            .menu ul li a {
+                text-decoration: none;
+                display: block;
+                color: #fff;
+                padding: 20px 0;
+                text-align: center;
+            }
+
+        .menu ul .todos {
+            background: #3691be;
+        }
+
+        .menu ul .laptop {
+            background: #106288;
+        }
+
+        .menu ul .camara {
+            background: #0b4661;
+        }
+
+        .menu ul .iphone {
+            background: #093144;
+        }
+
+        .menu ul .audifono {
+            background: #022535;
+        }
+
+    .galeria {
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+        display: flex;
+        ;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+        .galeria .title-img {
+            width: 100%;
+            border-top: 4px solid #46ABDF;
+        }
+
+            .galeria .title-img h3 {
+                font-size: 30px;
+                text-align: center;
+                padding: 10px 0;
+                color: #636363;
+                font-weight: 100;
+            }
+
+        .galeria .box-img {
+            width: calc(100px * 3);
+            margin: 10px;
+            border-radius: 2px;
+            box-shadow: 0 0 7px 0 rgba(0,0,0,.6);
+            overflow: hidden;
+        }
+
+            .galeria .box-img img {
+                width: 100%;
+                vertical-align: top;
+                cursor: pointer;
+                transition: all .5s ease;
+            }
+
+                .galeria .box-img img:hover {
+                    transform: scale(1.2);
+                }
+
+    .active {
+        border-bottom: 4px solid #E62117;
+    }
+</style>
+
+
+
+
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url('/Content/images/bg_5.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -101,7 +202,38 @@
     </div>
 </section>
 
-<section class="ftco-appointment ftco-section img" style="background-image: url(~/Content/images/bg_2.jpg);">
+
+
+@*filter*@
+<div class="containerx">
+    <div class="menu">
+        <ul>
+            <li class="todos active"><a href="#" class="btn-menu" data-filter="todos">Todos</a></li>
+            <li class="laptop"><a href="#" class="btn-menu" data-filter="Table">Mesa</a></li>
+            <li class="camara"><a href="#" class="btn-menu" data-filter="Pack">Empacar</a></li>
+            <li class="iphone"><a href="#" class="btn-menu" data-filter="Wrap">Envolver</a></li>
+        </ul>
+    </div>
+
+    <div class="galeria">
+        <div class="title-img">
+            <h3>Galeria de Imagenes</h3>
+        </div>
+        @*@foreach (var Article in ViewBag.Article)
+        {
+            <div class="box-img @Article["category"]">
+                <img src="@Article["image"]" alt="">
+            </div>
+        }*@
+
+    </div>
+</div>
+@*fin filter*@
+
+
+
+
+<section class="ftco-appointment ftco-section img" style="background-image: url(~/Content/images/image-control-para-hacer-algo.jpg);">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -194,4 +326,3 @@
         </div>
     </div>
 </section>
-

@@ -18,6 +18,7 @@
     <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/css/flaticon.css" rel="stylesheet" />
     <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/css/icomoon/styles.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -26,8 +27,8 @@
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center">
                     <p class="mb-0 phone pl-md-2">
-                        <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +00 1234 567</a>
-                        <a href="#"><span class="fa fa-paper-plane mr-1"></span>soporte@webplastic.com</a>
+                        <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +57 312 6070792</a>
+                        <a href="#"><span class="fa fa-paper-plane mr-1"></span>webplastic@hotmail.com</a>
                     </p>
                 </div>
                 <div class="col-md-6 d-flex justify-content-md-end">
@@ -52,13 +53,32 @@
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item "><a href="@Url.Action("Index")" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="@Url.Action("QuienesSomos")" class="nav-link">¿Quiénes somos?</a></li>
-                    <li class="nav-item"><a href="@Url.Action("Catalogo")" class="nav-link">Catálogo</a></li>
-                    <li class="nav-item"><a href="@Url.Action("Blog")" class="nav-link">Blog</a></li>
+                    <li class="nav-item "><a href="@Url.Action("Index","Home")" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="@Url.Action("QuienesSomos","Home")" class="nav-link">¿Quiénes somos?</a></li>
+                    <li class="nav-item"><a href="@Url.Action("Catalogo","Home")" class="nav-link">Catálogo</a></li>
+                    <li class="nav-item"><a href="@Url.Action("Blog","Home")" class="nav-link">Blog</a></li>
                     <!--<li class="nav-item"><a href="Carrito.php" class="nav-link">Carrito</a></li>-->
-                    <li class="nav-item"><a href="@Url.Action("Registro")" class="nav-link">Registrarse</a></li>
-                    <li class="nav-item"><a href="@Url.Action("Ingreso")" class="nav-link">Ingresar</a></li>
+                    @if (Convert.ToInt32(Session["idUser"]) == 1)
+                    {
+                        <li class="nav-item dropdown dropdown-user">
+                            <a href="#" class="btn btn-primary navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
+                                <img src="../../../../global_assets/images/placeholders/placeholder.jpg" class="rounded-circle mr-2" height="34" alt="">
+                                <span>@Session["Name"]</span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="@Url.Action("MyProfile","Administrator")" class="dropdown-item"><i class="icon-user-plus"></i> Mi Perfil</a>
+                                <a href="@Url.Action("MyCart","Administrator")" class="dropdown-item"><i class="icon-coins"></i> Mi Carrito</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="@Url.Action("Logout","Home")" class="dropdown-item"><i class="icon-switch2"></i> Cerrar Sesión</a>
+                            </div>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item"><a href="@Url.Action("Registro","Home")" class="nav-link">Registrarse</a></li>
+                        <li class="nav-item"><a href="@Url.Action("Ingreso","Home")" class="nav-link">Ingresar</a></li>
+                    }
                 </ul>
             </div>
         </div>
@@ -105,8 +125,8 @@
                         <h2 class="ftco-heading-2">¿Cómo encontrarnos?</h2>
                         <div class="block-23 mb-3">
                             <ul>
-                                <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                                <li><span class="icon fa fa-map marker"></span><span class="text">Carrera 23 calle 19 webplastic</span></li>
+                                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+57 312 6070792</span></a></li>
                                 <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">soporte@webplastic.com</span></a></li>
                             </ul>
                         </div>
@@ -136,6 +156,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="~/Content/js/google-map.js"></script>
     <script src="~/Content/js/main.js"></script>
+    <script src="~/Content/js/filtro.js"></script>
 
     <!--<script src="js/jquery.waypoints.min.js"></script>-->
 </body>

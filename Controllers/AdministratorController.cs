@@ -9,7 +9,17 @@ namespace WebPlastic.Controllers
     public class AdministratorController : Controller
     {
         // GET: Administrator
-        public ActionResult IndexUser()
+        public ActionResult MyProfile()
+        {
+            return View();
+        }
+
+        public ActionResult MyCart()
+        {
+            return View();
+        }
+
+        public ActionResult CreateArticle()
         {
             return View();
         }
