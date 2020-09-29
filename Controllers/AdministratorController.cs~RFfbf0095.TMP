@@ -1,0 +1,53 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace WebPlastic.Controllers
+{
+    public class AdministratorController : Controller
+    {
+        // GET: Administrator
+        public ActionResult MyProfile()
+        {
+            return View();
+        }
+
+        public ActionResult MyCart()
+        {
+            return View();
+        }
+
+        public ActionResult CreateArticle()
+        {
+            return View();
+        }
+        public ActionResult UpdateProfile(Models.User model, int id)
+        {
+            //if (Session["idCliente"] != null)
+            //{
+            model.idProfile = id;
+       
+            ConnectionDataBase.StoreProcediur data = new ConnectionDataBase.StoreProcediur();
+            DataTable dd = data.UpdateLicencia(model);
+
+
+
+            if (Convert.ToInt32(dd.Rows[0]["respuesta"]) > 0)
+            {
+                Session["message"] = "Perfil Modificado Exitosamente";
+                Session["title"] = "Muy bien";
+                Session["type"] = "success";
+            }
+            else
+            {
+                Session["message"] = "Problemas Actualizando el perfil Intente Nuevamente O Contacte Al Administrador";
+                Session["title"] = "Error";
+                Session["type"] = "error";
+            }
+            return RedirectToAction("Licencias");
+           
+        }
+    }
+}

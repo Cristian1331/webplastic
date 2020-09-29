@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using WebPlastic.App_Data;
+
+namespace WebPlastic.Controllers
+{
+    public class AdministratorController : Controller
+    {
+        // GET: Administrator
+        public ActionResult MyProfile()
+        {
+            ConnectionDataBase.StoreProcediur data = new ConnectionDataBase.StoreProcediur();
+            DataTable dt = data.GetUser(Convert.ToInt32(Session["idUser"]));
+            ViewBag.usuario = dt.Rows[0];
+
+            return View();
+
+        }
+
+        public ActionResult MyCart()
+        {
+            return View();
+        }
+
+        public ActionResult CreateArticle()
+        {
+            return View();
+        }
+         public ActionResult UpdateProfile(WebPlastic.Models.User model)
+         {
+            ConnectionDataBase.StoreProcediur data = new ConnectionDataBase.StoreProcediur();
+            model.idUser = Convert.ToInt32(Session["idUser"]);
+            DataTable dt = data.UpdateUser(model);
+
+            if (Convert.ToInt32(dt.Rows[0]["respuesta"]) > 0)
+            {
+                Session["message"] = " Modificado Exitosamente";
+                Session["title"] = "Muy bien";
+                Session["type"] = "success";
+            }
+            else
+            {
+                Session["message"] = "Problemas Actualizando , Intente Nuevamente O Contacte Al Administrador";
+                Session["title"] = "Error";
+                Session["type"] = "error";
+            }
+            return RedirectToAction("index");
+        }
+    }
+}
