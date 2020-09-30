@@ -4,26 +4,90 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!--form------------------------------------------------------------------------------------>
 <section class="ftco-appointment ftco-section img pt-1" style="background-image: url(~/Content/images/bg_2.jpg);">
-    <div class="overlay"> </div>
-    <div class="col-md-4 half ftco-animate" style="margin: 10px auto;">
-        <h2 class="mb-4 m-auto">Bienvenido</h2>
-        <form action="@Url.Action("Login")" class="appointment">
-            <div class="form-group col-md-12 p-0">
-                <label for="inputEmail4">Nombre</label>
-                <input type="text" class="form-control" name="UserName">
-            </div>
-            <div class="form-group col-md-12 p-0 mb-5">
-                <label for="inputAddress2">Contraseña</label>
-                <input type="password" class="form-control" name="Password">
-            </div>
-            <div class="col-md-12">
-                <div class="form-group col-md-12">
-                    <input type="submit" value="Enviar" class="btn btn-primary py-3 px-4">
+    <section class="ftco-appointment ftco-section img pt-1" style="background-image: url(images/bg_2.jpg);">
+        <div class="overlay"> </div>
+        <div class="col-md-10 half ftco-animate" style="margin: 10px auto;">
+            <h2 class="mb-4">Bienvenido</h2>
+            <form action="@Url.Action("UpdateProfile")" method="post" id="formsaveProfile" enctype="multipart/form-data">
+
+                <div class="form-row">
+                    <div class="form-group col-md-5 p-0">
+                        <label for="">Nombre</label>
+                        <input value="@ViewBag.User["Name"]" type="text" ViewBag.usuario class="form-control" name="Name" required>
+                    </div>
+                    <div class="form-group col-md-1">
+                    </div>
+                    <div class="form-group col-md-5 p-0">
+                        <label for="">Apellido</label>
+                        <input value="@ViewBag.User["Last"]" type="text" ViewBag.usuario class="form-control" name="Last" required>
+
+                    </div>
                 </div>
-            </div>
-        </form>
-    </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5 p-0">
+                        <label for="inputAddress1">Correo</label>
+                        <input style="padding: 10px ;" value="@ViewBag.User["Email"]" type="text" class="form-control" name="Email" required>
+                    </div>
+                    <div class="form-group col-md-1">
+                    </div>
+                    <div class="form-group col-md-5 p-0">
+                        <label for="inputEmail4">nombre de usuario</label>
+                        <input value="@ViewBag.User["UserName"]" type="text" class="form-control" name="UserName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+
+                    <div class="form-group col-md-5 p-0">
+                        <label for="inputEmail4">direccion</label>
+                        <input value="@ViewBag.User["Address"]" type="text" class="form-control" name="Address" required>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+
+                        <a href="@Url.Action("index")" class="btn btn-primary py-3 px-4">Cancelar</a>
+
+                    </div>
+                    <div class="col-md-3">
+
+                        <input type="submit" value="Guardar" class="btn btn-primary py-3 px-4 btnsave">
+
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                </div>
+</form>
+        </div>
+    </section>
 </section>
-<!--ENDform------------------------------------------------------------------------------------>
+
+
+
+
+@if (TempData["message"] != null)
+{
+    <script type="text/javascript">
+        Swal.fire({
+            type: '@TempData["type"]',
+            title: '@TempData["title"]',
+            html: '@TempData["message"]',
+            showConfirmButton: false,
+            timer: 3000
+        })
+    </script>
+    TempData.Remove("type");
+    TempData.Remove("title");
+    TempData.Remove("message");
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+
+    })
+</script>
+
+

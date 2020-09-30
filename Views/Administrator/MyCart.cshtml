@@ -4,20 +4,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <div class="content-wrapper">
-        <div class="content m-5">
-            <!-- Basic datatable -->
-            <div class="card">
-                <div class="card-header header-elements-inline bg-primary">
-                    <h5 class="card-title">Mi Carrito</h5>
-                    <div class="header-elements">
-                        <div class="list-icons">
-                            <a class="list-icons-item" data-action="collapse"></a>
-                            <a class="list-icons-item" data-action="reload"></a>
-                            <a class="list-icons-item" data-action="remove"></a>
-                        </div>
+<div class="content-wrapper">
+    <div class="content m-5">
+        <!-- Basic datatable -->
+        <div class="card">
+            <div class="card-header header-elements-inline bg-primary">
+                <h5 class="card-title">Mi Carrito</h5>
+                <div class="header-elements">
+                    <div class="list-icons">
+                        <a class="list-icons-item" data-action="collapse"></a>
+                        <a class="list-icons-item" data-action="reload"></a>
+                        <a class="list-icons-item" data-action="remove"></a>
                     </div>
                 </div>
+<<<<<<< HEAD
 
                 <table class="table datatable-basic">
                     <tbody>
@@ -46,7 +46,58 @@
                     </tr>
                     </tbody>
                 </table>
+=======
+>>>>>>> d0c07409010f7caea9788e5a1e631f2036de22a2
             </div>
-            <!-- /basic datatable -->
+
+            <table class="table datatable-basic">
+                <tbody>
+                    <tr>
+                        <td>Marth</td>
+                        <td><a href="#">Enright</a></td>
+                        <td>Traffic Court Referee</td>
+                        <td>22 Jun 1972</td>
+                        <td><span class="badge badge-success">Active</span></td>
+                        <td class="text-center"><a href="#" class=""><i class="icon-menu9"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+        <!-- /basic datatable -->
     </div>
+</div>
+<div class="content-wrapper">
+    <div class="content m-5">
+        <!-- Basic datatable -->
+        <div class="card">
+            <div class="card-header header-elements-inline bg-primary">
+                <h5 class="card-title">Usuarios</h5>
+                <div class="header-elements">
+                    <div class="list-icons">
+                        <a class="list-icons-item" data-action="collapse"></a>
+                        <a class="list-icons-item" data-action="reload"></a>
+                        <a class="list-icons-item" data-action="remove"></a>
+                    </div>
+                </div>
+            </div>
+          
+            @foreach (var user in ViewBag.User)
+                {
+                    <table class="table datatable-basic">
+                        <tbody>
+                            <tr>
+                                <td>@user["Name"]</td>
+                                <td>@user["Last"]</td>
+                                <td>@user["Email"]</td>
+                                <td>@user["UserName"]</td>
+                                <td>@user["Address"]</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                }
+            
+            </div>
+        <!-- /basic datatable -->
+    </div>
+</div>
