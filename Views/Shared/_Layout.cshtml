@@ -72,8 +72,19 @@
 
                             <div class="dropdown-menu dropdown-menu-right">
                                 <a href="@Url.Action("MyProfile","Administrator")" class="dropdown-item"><i class="icon-user-plus"></i> Mi Perfil</a>
-                                <a href="@Url.Action("MyCart","Administrator")" class="dropdown-item"><i class="icon-coins"></i> Mi Carrito</a>
-                                <div class="dropdown-divider"></div>
+
+
+                                @if (Session["idProfile"].ToString() == "2")
+                                {
+                                    <a href="@Url.Action("Users", "Administrator")" class="dropdown-item"><i class="icon-users4"></i> usuarios</a>
+                                    <div class="dropdown-divider"></div>
+                                }
+                                else
+                                {
+
+                                    <a href="@Url.Action("MyCart","Administrator")" class="dropdown-item"><i class="icon-coins"></i> Mi Carrito</a>
+
+                                }
                                 <a href="@Url.Action("Logout","Home")" class="dropdown-item"><i class="icon-switch2"></i> Cerrar Sesión</a>
                             </div>
                         </li>

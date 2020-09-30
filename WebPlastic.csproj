@@ -360,6 +360,7 @@
     <Content Include="Views\Administrator\MyCart.cshtml" />
     <Content Include="Views\Administrator\CreateArticle.cshtml" />
     <Content Include="Views\Administrator\MyProfile.cshtml" />
+    <Content Include="Views\Administrator\Users.cshtml" />
     <None Include="Views\Home\Blog1.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contactanos.cshtml" />

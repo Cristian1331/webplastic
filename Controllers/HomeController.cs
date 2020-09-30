@@ -111,12 +111,7 @@ namespace WebPlastic.Controllers
                 if (dt.Rows.Count > 0)
                 {
                     DataRow row = dt.Rows[0];
-                    if (Convert.ToInt32(row["idProfile"]) == 2)
-                    {
-                        Session["message"] = "Este usuario se encuentra inactivo, por favor comunicar al administrador.";
-                    }
-                    else
-                    {
+                   
                         byte[] password = (byte[])row["Password"];
                         byte[] key = (byte[])row["pKEY"];
                         byte[] iv = (byte[])row["pIV"];
@@ -143,7 +138,7 @@ namespace WebPlastic.Controllers
                             {
                                 Session["message"] = "Las credenciales de usuario no coinciden, verifique.";
                             }
-                        }
+                        
                     }
                 }
                 else

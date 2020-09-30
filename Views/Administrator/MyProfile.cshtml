@@ -1,4 +1,5 @@
 ﻿
+
 @{
     ViewBag.Title = "MyProfile";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,7 +10,7 @@
         <div class="overlay"> </div>
         <div class="col-md-10 half ftco-animate" style="margin: 10px auto;">
             <h2 class="mb-4">Bienvenido</h2>
-            <form action="@Url.Action("UpdateProfile")" method="post" id="formsaveProfile" enctype="multipart/form-data">
+            <form action="@Url.Action("UpdateUser","Administrator")" method="post" id="formsaveProfile" enctype="multipart/form-data">
 
                 <div class="form-row">
                     <div class="form-group col-md-5 p-0">
@@ -50,7 +51,7 @@
                     </div>
                     <div class="col-md-3">
 
-                        <a href="@Url.Action("index")" class="btn btn-primary py-3 px-4">Cancelar</a>
+                        <a href="@Url.Action("Index","Home")" class="btn btn-primary py-3 px-4">Cancelar</a>
 
                     </div>
                     <div class="col-md-3">
@@ -61,7 +62,7 @@
                     <div class="col-md-3">
                     </div>
                 </div>
-</form>
+            </form>
         </div>
     </section>
 </section>
@@ -89,5 +90,3 @@
 
     })
 </script>
-
-

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-<<<<<<< HEAD
+
 using System.IO;
-=======
->>>>>>> d0c07409010f7caea9788e5a1e631f2036de22a2
+
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -17,9 +16,26 @@ namespace WebPlastic.Controllers
         // GET: Administrator
         public ActionResult MyProfile()
         {
-            ConnectionDataBase data = new ConnectionDataBase();
-            DataTable dt = data.GetUser("");
+
+
+            ConnectionDataBase.StoreProcediur data = new ConnectionDataBase.StoreProcediur();
+            DataTable dt = data.GetUser(Convert.ToInt32(Session["idUser"]));
+
+            ViewBag.User = dt.Rows[0];
+
+            return View();
+
+
+        }
+
+        public ActionResult Users()
+        {
+
+            ConnectionDataBase.StoreProcediur data = new ConnectionDataBase.StoreProcediur();
+            DataTable dt = data.ObtenerData("SP_GetUser");
             ViewBag.User = dt.Rows;
+
+
             return View();
 
         }
@@ -104,15 +120,18 @@ namespace WebPlastic.Controllers
 
 
        
-        public ActionResult UpdateProfile(Models.User model, int id)
+       
+
+        public ActionResult UpdateUser(Models.User model)
         {
-            model.idUser = id;
             ConnectionDataBase.StoreProcediur data = new ConnectionDataBase.StoreProcediur();
+            model.idUser = (Convert.ToInt32(Session["idUser"]));
             DataTable dt = data.UpdateUser(model);
-            return RedirectToAction("index");
+            ViewBag.Userr = dt.Rows;
+
+            return RedirectToAction("MyProfile");
         }
 
-        
-      
+
     }
 }
