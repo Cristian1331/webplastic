@@ -19,18 +19,26 @@ namespace WebPlastic.Models
         public int idProfile { get; set; }
     }
 
+    public class Login
+    {
+        public string UserName { get; set; }
+        public string Password { get; set; }
+    }
+
+    //Modify
     public class Article
     {
         public int idArticle { get; set; }
+        public int idCategory { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
         public double Price { get; set; }
     }
 
-    public class Login
+    public class Cart
     {
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        public int idArticle { get; set; }
+        public int idUser { get; set; }
     }
 }

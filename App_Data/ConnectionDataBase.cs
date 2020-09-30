@@ -27,6 +27,7 @@ namespace WebPlastic.App_Data
                 }
             }
 
+            
             public DataTable ValidarIngresoUsuario(string UserName, string macAddress)
             {
                 try
@@ -91,8 +92,107 @@ namespace WebPlastic.App_Data
                     string sas = e.Message; throw;
                 }
             }
-        }
 
+            //chages
+
+            public DataTable GetArticle()
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["webplasticEntities"].ConnectionString);
+                    SqlDataAdapter da = new SqlDataAdapter("SP_GetArticle", con);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+
+            public DataTable GetCategory()
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["webplasticEntities"].ConnectionString);
+                    SqlDataAdapter da = new SqlDataAdapter("SP_GetCategory", con);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+
+            public DataTable GetCart(int idUser)
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["webplasticEntities"].ConnectionString);
+                    SqlDataAdapter da = new SqlDataAdapter("SP_GetCart", con);
+                    da.SelectCommand.Parameters.Add("@idUser", SqlDbType.Int).Value = idUser;
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+
+            public DataTable AddCart(int idArticle,int idUser)
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["webplasticEntities"].ConnectionString);
+                    SqlDataAdapter da = new SqlDataAdapter("SP_AddCart", con);
+                    da.SelectCommand.Parameters.Add("@idArticle", SqlDbType.Int).Value = idArticle; 
+                    da.SelectCommand.Parameters.Add("@idUser", SqlDbType.Int).Value = idUser;
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+
+            public DataTable StorageArticle(Models.Article model)
+            {
+                try
+                {
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["webplasticEntities"].ConnectionString);
+                    SqlDataAdapter da = new SqlDataAdapter("SP_StorageArticle", con);
+                    da.SelectCommand.Parameters.Add("@idCategory", SqlDbType.Int).Value = model.idCategory;
+                    da.SelectCommand.Parameters.Add("@image", SqlDbType.VarChar).Value = model.Image;
+                    da.SelectCommand.Parameters.Add("@name", SqlDbType.VarChar).Value = model.Name;
+                    da.SelectCommand.Parameters.Add("@price", SqlDbType.Float).Value = model.Price;
+                    da.SelectCommand.Parameters.Add("@description", SqlDbType.VarChar).Value = model.Description;
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+        }
         
     }
 }

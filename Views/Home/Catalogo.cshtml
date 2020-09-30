@@ -1,5 +1,8 @@
-﻿@{ ViewBag.Title = "Catalogo";
-                Layout = "~/Views/Shared/_Layout.cshtml"; }
+﻿
+@{ 
+   ViewBag.Title = "Catalogo";
+   Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
 
 <style type="text/css">
 
@@ -105,7 +108,7 @@
 
 
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('/Content/images/bg_5.jpg');" data-stellar-background-ratio="0.5">
+@*<section class="hero-wrap hero-wrap-2" style="background-image: url('/Content/images/bg_5.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -200,7 +203,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>*@
 
 
 
@@ -209,9 +212,10 @@
     <div class="menu">
         <ul>
             <li class="todos active"><a href="#" class="btn-menu" data-filter="todos">Todos</a></li>
-            <li class="laptop"><a href="#" class="btn-menu" data-filter="Table">Mesa</a></li>
-            <li class="camara"><a href="#" class="btn-menu" data-filter="Pack">Empacar</a></li>
-            <li class="iphone"><a href="#" class="btn-menu" data-filter="Wrap">Envolver</a></li>
+            @foreach (var Category in ViewBag.Category)
+            {
+                <li class="laptop"><a href="#" class="btn-menu" data-filter="@Category["idCategory"]">@Category["Category"]</a></li>
+            }
         </ul>
     </div>
 
@@ -219,12 +223,23 @@
         <div class="title-img">
             <h3>Galeria de Imagenes</h3>
         </div>
-        @*@foreach (var Article in ViewBag.Article)
+        @foreach (var Article in ViewBag.Article)
         {
-            <div class="box-img @Article["category"]">
-                <img src="@Article["image"]" alt="">
+            <div class="box-img @Article["idCategory"] p-1">
+                <img class="img-fluid m-auto d-block" src="@Article["image"]" alt="">
+                <h4 class="text-center">@Article["name"]</h4>
+                <h6>@Article["description"]</h6>
+                <p>Precio: $@Article["price"]</p>
+                @if (Session["idUser"] != null)
+                {
+                    <a class="btn btn-primary btn-block" href="@Url.Action("AddCart","Administrator", new {@id = Article["idArticle"]})">añadir al carrito</a>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-block" href="Ingreso">añadir al carrito</a>
+                }
             </div>
-        }*@
+        }
 
     </div>
 </div>
@@ -233,7 +248,7 @@
 
 
 
-<section class="ftco-appointment ftco-section img" style="background-image: url(~/Content/images/image-control-para-hacer-algo.jpg);">
+@*<section class="ftco-appointment ftco-section img" style="background-image: url(~/Content/images/image-control-para-hacer-algo.jpg);">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
@@ -325,4 +340,4 @@
             </div>
         </div>
     </div>
-</section>
+</section>*@

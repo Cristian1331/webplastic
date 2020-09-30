@@ -49,6 +49,11 @@ namespace WebPlastic.Controllers
 
         public ActionResult Catalogo()
         {
+            ConnectionDataBase.StoreProcediur data = new ConnectionDataBase.StoreProcediur();
+            DataTable td = data.GetArticle();
+            ViewBag.Article = td.Rows;
+            td = data.GetCategory();
+            ViewBag.Category = td.Rows;
             return View();
         }
 

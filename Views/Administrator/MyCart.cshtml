@@ -21,14 +21,29 @@
 
                 <table class="table datatable-basic">
                     <tbody>
-                        <tr>
-                            <td>Marth</td>
-                            <td><a href="#">Enright</a></td>
-                            <td>Traffic Court Referee</td>
-                            <td>22 Jun 1972</td>
-                            <td><span class="badge badge-success">Active</span></td>
-                            <td class="text-center"><a href="#" class=""><i class="icon-menu9"></i></a></td>
-                        </tr>
+                        @foreach (var Article in ViewBag.Article)
+                        {
+                            foreach (var Articles in ViewBag.Articles)
+                            {
+                                if (Article["idArticle"] == Articles["idArticle"])
+                                {
+                                    <tr>
+                                        <td class="text-center"><img height="60" src="@Article["image"]" alt="Alternate Text" /></td>
+                                        <td class="text-center">@Article["name"]</td>
+                                        <td class="text-center">@Article["description"]</td>
+                                        <td class="text-center">$@Article["Price"]</td>
+                                        <td class="text-center"><a href="#" class=""><i class="icon-menu9"></i></a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-center"><a href="#" class="btn btn-primary py-3 px-4">Pagar</a></td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
